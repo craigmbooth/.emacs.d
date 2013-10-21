@@ -9,6 +9,10 @@
 (when (fboundp 'scroll-bar-mode)
   (scroll-bar-mode -1))
 
+(when (>= emacs-major-version 24)
+  ;;Ensure that we have access to package managers
+  (load "cmb-packages.el")
+)
 ;;Third-party packages I have installed
 (add-to-list 'load-path "~/.emacs.d/packages/")
 (add-to-list 'load-path "~/.emacs.d/cmbmacs/")
@@ -26,14 +30,13 @@
 ;;(This is a bit lazy, but the package package is only default
 ;; in major version 24+)
 (when (>= emacs-major-version 24)
-  (load "cmb-packages.el")    ;package management
   (load "cmb-python.el")      ;settings for python-mode
 
   ;;Favorite color scheme (M-x package-install zenburn-theme)
   (load-theme 'zenburn t)
-
 )
-
 
 ;;Various packages that I just always switch on
 (require 'hackernews)
+(require 'guru-mode)
+(guru-global-mode +1)
