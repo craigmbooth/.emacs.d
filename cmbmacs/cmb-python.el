@@ -12,4 +12,8 @@
 (setq jedi:complete-on-dot t)  ;always autocomplete after typing .
 (setq jedi:tooltip-method nil) ;function signature in minibuffer
 
+;;Spellcheck comments in python documents
+(add-hook 'python-mode-hook
+   (lambda()
+      flyspell-prog-mode 1)))
 

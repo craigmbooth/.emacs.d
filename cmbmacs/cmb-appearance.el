@@ -7,13 +7,6 @@
 ;;Show line numbers to left of screen
 (global-linum-mode t)
 
-;;Hide menu bar, tool bar and scroll bar
-(menu-bar-mode -1)
-(when (fboundp 'tool-bar-mode)
-  (tool-bar-mode -1))
-(when (fboundp 'scroll-bar-mode)
-  (scroll-bar-mode -1))
-
 ;;Make the cursor stretch when it's on a wide-char like a tab:
 (setq x-stretch-cursor t)
 
