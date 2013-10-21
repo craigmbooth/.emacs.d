@@ -15,5 +15,5 @@
 ;;Spellcheck comments in python documents
 (add-hook 'python-mode-hook
    (lambda()
-      flyspell-prog-mode 1)))
+      flyspell-prog-mode 1))
 
