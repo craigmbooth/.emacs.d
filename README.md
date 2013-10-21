@@ -12,4 +12,4 @@ The packages/ directory currently contains
 * hackernews.el --- Hacker News Client for Emacs (lincoln@comum.org)
 * highlight-indentation.el --- Minor modes for highlighting indentation (anton.johansson@gmail.com)
 
-Things somewhat work in Emacs 23, but it lacks the package package and I don't make much use of older Emacs any more so have just skipped a lot of this code.  The code will attempt to install everything on a first run using el-get and package.  Wish it luck!
+Things somewhat work in Emacs 23, but it lacks the package package and I don't make much use of older Emacs any more so have just skipped a lot of this code.  The code will attempt to install everything on a first run using package.  Wish it luck!
