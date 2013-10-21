@@ -19,14 +19,21 @@
 ;Things for editing plaintext
 (load "cmb-textedit.el")
 
-;;If version is 24+ then load everything
+;Changing how frames look
+(load "cmb-appearance.el")
+
+;;If version is 24+ then more stuff
 ;;(This is a bit lazy, but the package package is only default
-;; in major version 24+
+;; in major version 24+)
 (when (>= emacs-major-version 24)
   (load "cmb-packages.el")    ;package management
-  (load "cmb-appearance.el")  ;changing how frames look
   (load "cmb-python.el")      ;settings for python-mode
+
+  ;;Favorite color scheme (M-x package-install zenburn-theme)
+  (load-theme 'zenburn t)
+
 )
+
 
 ;;Various packages that I just always switch on
 (require 'hackernews)
