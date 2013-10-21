@@ -1,3 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
 ;;;Repositories for emacs packages
 (require 'package)
 (require 'cl)
@@ -8,9 +10,25 @@
 
 (package-initialize)
 
+
+
+(unless (require 'el-get nil t)
+  (url-retrieve
+   "https://github.com/dimitri/el-get/raw/master/el-get-install.el"
+   (lambda (s)
+     (end-of-buffer)
+     (eval-print-last-sexp))))
+
+
+(setq el-get-sources '(el-get jedi))
+(el-get 'sync)
+
+;;; Packages to be installed by package
 (defvar cmb-packages
-  '(zenburn-theme python-mode jedi)
+  '(zenburn-theme python-mode)
   "Ensure all the following packages are installed via package manager.")
+
+;;; Packages to be installed by el-get
 
 (defun cmb-packages-installed-p ()
   (loop for p in cmb-packages
