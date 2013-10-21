@@ -4,6 +4,7 @@
       whitespace-style '(face tabs trailing lines-tail))
 
 ;;Highlight indentations with vertical lines
+(require 'highlight-indentation)
 (add-hook 'python-mode-hook 'highlight-indentation-mode)
 
 ;; Stuff for jedi (M-x el-get-install jedi):
@@ -13,7 +14,7 @@
 (setq jedi:tooltip-method nil) ;function signature in minibuffer
 
 ;;Spellcheck comments in python documents
-(add-hook 'python-mode-hook
-   (lambda()
-      flyspell-prog-mode 1))
+;;(add-hook 'python-mode-hook
+;;   (lambda()
+;;      flyspell-prog-mode 1))
 

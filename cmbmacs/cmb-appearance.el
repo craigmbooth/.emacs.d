@@ -1,3 +1,6 @@
+;;Favorite color scheme (M-x package-install zenburn-theme)
+(load-theme 'zenburn t)
+
 ;;;Hide stupid startup screen
 (setq inhibit-startup-message t)
 
