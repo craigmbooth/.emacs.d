@@ -54,3 +54,7 @@ point reaches the beginning or end of the buffer, stop there."
    kept-old-versions 2
    version-control t)       ; use versioned backups
 
+;;Enable windmove bindings so that shift-<direction> moves
+;;Between buffers
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
