@@ -6,7 +6,7 @@
 
 ;;; Packages to be installed by package
 (defvar cmb-packages
-  '(zenburn-theme python-mode epc auto-complete jedi)
+  '(zenburn-theme python-mode)
   "Ensure all the following packages are installed via package manager.")
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -15,14 +15,6 @@
 
 (package-initialize)
 
-(unless (require 'el-get nil t)
-  (setq el-get-install-branch "master")
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-    (end-of-buffer)
-    (eval-print-last-sexp))
-  (el-get-emacswiki-refresh el-get-recipe-path-emacswiki t))
 
 (defun cmb-packages-installed-p ()
   (loop for p in cmb-packages
@@ -40,6 +32,13 @@
     (when (not (package-installed-p p))
       (package-install p))))
 
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+    (let (el-get-master-branch)
+      (goto-char (point-max))
+      (eval-print-last-sexp))))
 
 ;Append packages we wanto to el-get's list:
 (setq my-el-get-packages  
