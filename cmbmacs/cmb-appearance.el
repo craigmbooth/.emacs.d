@@ -1,7 +1,11 @@
-;;Favorite color scheme (M-x package-install zenburn-theme)
+;;Zenburn theme with electric pink cursor
 (load-theme 'zenburn t)
+(add-to-list 'default-frame-alist '(cursor-color . "#f00bac"))
 
-;;;Always show column number
+;;Stop the cursor from blinking
+ (blink-cursor-mode -1)
+
+;;Always show column number
 (column-number-mode 1)
 
 ;;Show line numbers to left of screen
@@ -21,7 +25,4 @@
 ;;put emacs: [buffer name] in frame title
 (setq frame-title-format
   '("emacs: " (buffer-file-name "%f"
-                 (dired-directory dired-directory "%b")
-              )
-   )
-)
+    (dired-directory dired-directory "%b"))))
