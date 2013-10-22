@@ -9,8 +9,8 @@
 (require 'highlight-indentation)
 (add-hook 'python-mode-hook 'highlight-indentation-mode)
 
-;; Stuff for jedi (M-x el-get-install jedi):
-(when (> emacs-major-version 24)
+;; Stuff for jedi:
+(when (>= emacs-major-version 24)
 (progn 
   (add-hook 'python-mode-hook 'jedi:setup)
   (setq jedi:setup-keys t)       ;add key bindings
