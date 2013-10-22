@@ -1,5 +1,5 @@
 (when (< emacs-major-version 24)
-  (error "cmbmacs startup files require version 24+"))
+  (message "Will be missing some features with emacs major version < 24"))
 (message "Starting up with emacs version %s" emacs-version)
 
 (add-to-list 'load-path "~/.emacs.d/packages/")

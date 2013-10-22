@@ -10,10 +10,13 @@
 (add-hook 'python-mode-hook 'highlight-indentation-mode)
 
 ;; Stuff for jedi (M-x el-get-install jedi):
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:setup-keys t)       ;add key bindings
-(setq jedi:complete-on-dot t)  ;always autocomplete after typing .
-(setq jedi:tooltip-method nil) ;function signature in minibuffer
+(when (> emacs-major-version 24)
+(progn 
+  (add-hook 'python-mode-hook 'jedi:setup)
+  (setq jedi:setup-keys t)       ;add key bindings
+  (setq jedi:complete-on-dot t)  ;always autocomplete after typing .
+  (setq jedi:tooltip-method nil) ;function signature in minibuffer
+))
 
 ;; use IPython
 ;; C-c ! opens a python frame
