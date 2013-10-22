@@ -1,3 +1,5 @@
+(require 'python-mode)
+
 ;;Highlight trailing whitespace and lines over 80 characters
 (add-hook 'python-mode-hook 'whitespace-mode)
 (setq whitespace-line-column 80
@@ -12,13 +14,6 @@
 (setq jedi:setup-keys t)       ;add key bindings
 (setq jedi:complete-on-dot t)  ;always autocomplete after typing .
 (setq jedi:tooltip-method nil) ;function signature in minibuffer
-
-;;Spellcheck comments in python documents
-;;(add-hook 'python-mode-hook
-;;   (lambda()
-;;      flyspell-prog-mode 1))
-
-(require 'python-mode)
 
 ;; use IPython
 ;; C-c ! opens a python frame
