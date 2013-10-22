@@ -1,10 +1,11 @@
 .emacs.d
 ========
 
-This is my emacs setup.  Along with init.el, the setup is organized into two folders:
+This is my emacs setup.  Along with init.el, the setup is organized into three folders:
 
 * packages/ Small packages that I install by hand
 * cmbmacs/ My emacs configuration files, broken down by subject
+* local/ Local files for each machine. Ignored by the git repository
 
 The packages/ directory currently contains
 
