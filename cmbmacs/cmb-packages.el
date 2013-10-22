@@ -32,18 +32,22 @@
     (when (not (package-installed-p p))
       (package-install p))))
 
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-    (let (el-get-master-branch)
-      (goto-char (point-max))
-      (eval-print-last-sexp))))
+(when (>= emacs-major-version 24)
+   (progn
+     (unless (require 'el-get nil 'noerror)
+       (with-current-buffer
+	   (url-retrieve-synchronously
+	    "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+	 (let (el-get-master-branch)
+	   (goto-char (point-max))
+	   (eval-print-last-sexp))))
+	   ;Append packages we wanto to el-get's list:
+         (setq my-el-get-packages  
+          (append  
+           '(jedi)  
+           (mapcar 'el-get-source-name el-get-sources)))  
+           (el-get 'sync my-el-get-packages)  
+   )
+   ((message "Emacs version < 24, skipping el-get"))
+)
 
-;Append packages we wanto to el-get's list:
-(setq my-el-get-packages  
-      (append  
-       '(jedi)  
-       (mapcar 'el-get-source-name el-get-sources)))  
-  
-(el-get 'sync my-el-get-packages)  

@@ -1,6 +1,12 @@
 ;;Zenburn theme with electric pink cursor
-(load-theme 'zenburn t)
-(add-to-list 'default-frame-alist '(cursor-color . "#f00bac"))
+(when (> emacs-major-version 23)
+(progn 
+  (load-theme 'zenburn t)
+  (add-to-list 'default-frame-alist '(cursor-color . "#f00bac"))
+)
+(progn
+  (message "Skipping color theme for emacs 23")
+))
 
 ;;Stop the cursor from blinking
  (blink-cursor-mode -1)
