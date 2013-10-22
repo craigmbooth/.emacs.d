@@ -48,6 +48,8 @@
            (mapcar 'el-get-source-name el-get-sources)))  
            (el-get 'sync my-el-get-packages)  
    )
-   ((message "Emacs version < 24, skipping el-get"))
+   (progn
+    (message "Emacs version < 24, skipping el-get")
+   )
 )
 
