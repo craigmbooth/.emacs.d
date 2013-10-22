@@ -5,6 +5,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/packages/")
 (add-to-list 'load-path "~/.emacs.d/cmbmacs/")
+(add-to-list 'load-path "~/.emacs.d/local/")
 
 ;;Hide menu bar, tool bar and scroll bar
 ;;early on in startup to avoid having these elements flash on then off.
@@ -31,3 +32,11 @@
 
 ;;Various packages that I just always switch on
 (require 'hackernews)
+
+
+;; Load files any specific to local machine, which are stored
+;; in user-emacs-directory/local/
+(setq local-settings-dir
+      (concat user-emacs-directory "local/"))
+(when (file-exists-p local-settings-dir)
+  (mapc 'load (directory-files local-settings-dir nil "^[^#].*el$")))
