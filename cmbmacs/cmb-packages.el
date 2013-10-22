@@ -6,7 +6,7 @@
 
 ;;; Packages to be installed by package
 (defvar cmb-packages
-  '(zenburn-theme python-mode)
+  '(zenburn-theme python-mode typing)
   "Ensure all the following packages are installed via package manager.")
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
