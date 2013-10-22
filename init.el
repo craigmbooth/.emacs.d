@@ -1,4 +1,8 @@
+(when (< emacs-major-version 24) 
+  (error "cmbmacs startup files require version 24+")
+)
 (message "Starting up with emacs version %s" emacs-version)
+
 (add-to-list 'load-path "~/.emacs.d/packages/")
 (add-to-list 'load-path "~/.emacs.d/cmbmacs/")
 
@@ -16,13 +20,13 @@
 ;;Macros for navigating emacs frames and files
 (load "cmb-navigation.el")
 
-;;Things for editing plaintext
+;;Macros for editing plaintext
 (load "cmb-textedit.el")
 
-;;Changing how frames look
+;;Customized appearance
 (load "cmb-appearance.el")
 
-;;Settings for python-mode
+;;Settings for editing python
 (load "cmb-python.el")
 
 ;;Various packages that I just always switch on
