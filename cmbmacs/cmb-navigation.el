@@ -35,6 +35,19 @@ point reaches the beginning or end of the buffer, stop there."
 (require 'ido)
 (ido-mode t)
 
+;;allow ~ to take you directly home in ido-find-file
+(add-hook 'ido-setup-hook
+ (lambda ()
+   ;; Go straight home
+   (define-key ido-file-completion-map
+     (kbd "~")
+     (lambda ()
+       (interactive)
+       (if (looking-back "/")
+           (insert "~/")
+         (call-interactively 'self-insert-command))))))
+
+
 ;; allow shorter answers than [yes] or [no]
 (defalias 'yes-or-no-p 'y-or-n-p)
 
