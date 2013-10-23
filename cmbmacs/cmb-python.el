@@ -44,3 +44,5 @@
    (setq py-smart-indentation t)
    
 ))
+
+(provide 'cmb-python)

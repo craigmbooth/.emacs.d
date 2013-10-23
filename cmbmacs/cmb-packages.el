@@ -32,7 +32,7 @@
     (when (not (package-installed-p p))
       (package-install p))))
 
-(when (>= emacs-major-version 24)
+(if (>= emacs-major-version 24)
    (progn
      (unless (require 'el-get nil 'noerror)
        (with-current-buffer
@@ -53,3 +53,4 @@
    )
 )
 
+(provide 'cmb-packages)

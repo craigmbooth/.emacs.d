@@ -3,9 +3,6 @@
 (progn 
   (load-theme 'zenburn t)
   (add-to-list 'default-frame-alist '(cursor-color . "#f00bac"))
-)
-(progn
-  (message "Skipping color theme for emacs 23")
 ))
 
 ;;Stop the cursor from blinking
@@ -45,3 +42,5 @@
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
 
 (global-set-key [f11] 'toggle-fullscreen)
+
+(provide 'cmb-appearance)

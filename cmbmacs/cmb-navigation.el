@@ -71,3 +71,5 @@ point reaches the beginning or end of the buffer, stop there."
 ;;Between buffers
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
+
+(provide 'cmb-navigation)

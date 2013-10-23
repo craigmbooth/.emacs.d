@@ -13,20 +13,11 @@
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (setq inhibit-startup-message t)
 
-;;Package managers
-(load "cmb-packages.el")
-
-;;Macros for navigating emacs frames and files
-(load "cmb-navigation.el")
-
-;;Macros for editing plaintext
-(load "cmb-textedit.el")
-
-;;Customized appearance
-(load "cmb-appearance.el")
-
-;;Settings for editing python
-(load "cmb-python.el")
+(require 'cmb-packages)  ;;Package managers
+(require 'cmb-navigation)  ;;Macros for navigating emacs frames and files
+(require 'cmb-textedit)  ;;Macros for editing plaintext
+(require 'cmb-appearance)  ;;Customized appearance
+(require 'cmb-python)  ;;Settings for editing python
 
 ;;Various packages that I just always switch on
 (require 'hackernews)
