@@ -28,3 +28,6 @@
       (concat user-emacs-directory "local/"))
 (when (file-exists-p local-settings-dir)
   (mapc 'load (directory-files local-settings-dir nil "^[^#].*el$")))
+
+;; Leave a message saying when Emacs was loaded
+(message "Emacs loaded at %s." (format-time-string "%T %a %d %b %y"))

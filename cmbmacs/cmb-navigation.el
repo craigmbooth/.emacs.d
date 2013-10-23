@@ -77,4 +77,7 @@ point reaches the beginning or end of the buffer, stop there."
 (guru-global-mode +1)
 (diminish 'guru-mode) ;;Hide from minor-mode list
 
+;; Undo/redo window configuration with C-c <left>/<right>
+(winner-mode 1)
+
 (provide 'cmb-navigation)
