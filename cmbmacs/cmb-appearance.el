@@ -9,10 +9,13 @@
 ))
 
 ;;Stop the cursor from blinking
- (blink-cursor-mode -1)
+(blink-cursor-mode -1)
 
 ;;Always show column number
 (column-number-mode 1)
+
+;;Highlight the current buffer
+(auto-dim-other-buffers-mode 1)
 
 ;;Show line numbers to left of screen
 (global-linum-mode t)
