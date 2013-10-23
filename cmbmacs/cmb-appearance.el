@@ -13,6 +13,7 @@
 
 ;;Highlight the current buffer
 (auto-dim-other-buffers-mode 1)
+(diminish 'auto-dim-other-buffers-mode) ;;Hide from minor-mode list
 
 ;;Show line numbers to left of screen
 (global-linum-mode t)
@@ -33,6 +34,7 @@
   '("emacs: " (buffer-file-name "%f"
     (dired-directory dired-directory "%b"))))
 
+;;Let [f11] toggle fullscreen
 (defun toggle-fullscreen ()
   "Toggle full screen on X11"
   (interactive)
@@ -42,5 +44,6 @@
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
 
 (global-set-key [f11] 'toggle-fullscreen)
+
 
 (provide 'cmb-appearance)

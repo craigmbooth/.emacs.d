@@ -21,9 +21,6 @@
 
 ;;Various packages that I just always switch on
 (require 'hackernews)
-(require 'guru-mode)
-(guru-global-mode +1)
-
 
 ;; Load files any specific to local machine, which are stored
 ;; in user-emacs-directory/local/

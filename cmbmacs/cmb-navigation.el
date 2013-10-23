@@ -72,4 +72,9 @@ point reaches the beginning or end of the buffer, stop there."
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
 
+;;Suppress use of arrow keys:
+(require 'guru-mode)
+(guru-global-mode +1)
+(diminish 'guru-mode) ;;Hide from minor-mode list
+
 (provide 'cmb-navigation)
