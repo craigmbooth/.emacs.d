@@ -20,6 +20,9 @@
      (setq jedi:complete-on-dot t)  ;always autocomplete after typing .
      (setq jedi:tooltip-method nil) ;function signature in minibuffer
    ))
+
+   (require 'pretty-lambdada)
+   (add-hook 'python-mode-hook 'pretty-lambda-mode)
    
    ;; use IPython
    ;; C-c ! opens a python frame
