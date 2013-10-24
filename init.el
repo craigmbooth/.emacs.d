@@ -1,6 +1,5 @@
 (when (< emacs-major-version 24)
   (message "Will be missing some features with emacs major version < 24"))
-(message "Starting up with emacs version %s" emacs-version)
 
 (add-to-list 'load-path "~/.emacs.d/packages/")
 (add-to-list 'load-path "~/.emacs.d/cmbmacs/")
@@ -30,4 +29,6 @@
   (mapc 'load (directory-files local-settings-dir nil "^[^#].*el$")))
 
 ;; Leave a message saying when Emacs was loaded
-(message "Emacs loaded at %s." (format-time-string "%T %a %d %b %y"))
+(message "Starting up Emacs version %s at %s (PID=%d)" emacs-version  (format-time-string "%T %a %d %b %y") (emacs-pid))
+
+
