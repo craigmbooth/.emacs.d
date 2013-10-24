@@ -6,7 +6,14 @@
 
 ;;; Packages to be installed by package
 (defvar cmb-packages
-  '(zenburn-theme python-mode typing auctex auto-dim-other-buffers pretty-lambdada diminish)
+  '(zenburn-theme
+    python-mode
+    typing auctex
+    auto-dim-other-buffers
+    pretty-lambdada
+    diminish
+    w3m
+    )
   "Ensure all the following packages are installed via package manager.")
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
