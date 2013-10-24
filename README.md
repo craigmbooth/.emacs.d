@@ -34,3 +34,4 @@ Notable sources include:
 * [better-defaults](https://github.com/technomancy/better-defaults) --- Many sensible changes
 * [cjohansen/.emacs.d](https://github.com/cjohansen/.emacs.d) --- Killing screen junk at start of config
 * [cndreisbach/.emacs.d](https://github.com/cndreisbach/.emacs.d) --- Markdown mode and some keybindings
+* [milkypostman/dotemacs](https://github.com/milkypostman/dotemacs) --- Ideas for abbrev_defs
