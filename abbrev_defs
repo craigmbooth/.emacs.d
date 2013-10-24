@@ -11,7 +11,10 @@
 
 (define-abbrev-table 'fundamental-mode-abbrev-table '())
 
-(define-abbrev-table 'global-abbrev-table '())
+(define-abbrev-table 'global-abbrev-table 
+   '(
+      ("ddate" "" (lambda nil (insert (format-time-string "%Y-%m-%d" (current-time)))) 6)
+   ))
 
 (define-abbrev-table 'help-mode-abbrev-table '())
 

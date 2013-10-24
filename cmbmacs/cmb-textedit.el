@@ -5,4 +5,7 @@
   (lambda()
     (flyspell-mode 1)))
 
+(setq default-abbrev-mode t)
+(diminish 'abbrev-mode)
+
 (provide 'cmb-textedit)
