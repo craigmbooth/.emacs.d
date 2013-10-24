@@ -18,7 +18,7 @@ automatically be bootstrapped in by the code on first run.
 
 Clone the repository to your home directory
 
-    git clone git@github.com:craigmbooth/.emacs.d.git ~
+    git clone ssh://git@github.com:craigmbooth/.emacs.d.git ~
     
 Install the following support-executables, if they're not already installed
 
