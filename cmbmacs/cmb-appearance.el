@@ -13,7 +13,8 @@
 
 ;;Highlight the current buffer
 (auto-dim-other-buffers-mode 1)
-(diminish 'auto-dim-other-buffers-mode) ;;Hide from minor-mode list
+
+
 
 ;;Show line numbers to left of screen
 (global-linum-mode t)

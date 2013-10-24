@@ -11,16 +11,19 @@
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (setq inhibit-startup-message t)
 
+;;Before trying anything else, initialize packages
+(require 'cmb-packages)
+
 ;; The following are required in a number of different files
 (require 'pretty-lambdada)
 (require 'cl)
 
-(require 'cmb-packages)  ;;Package managers
 (require 'cmb-appearance)  ;;Customized appearance
 (require 'cmb-navigation)  ;;Macros for navigating emacs frames and files
 (require 'cmb-textedit)  ;;Macros for editing plaintext
 (require 'cmb-python)  ;;Settings for editing python
 (require 'cmb-keybindings)  ;;Remapped keys
+(require 'cmb-diminish) ;;Hide irrelevant minor modes
 
 ;; Various packages that I just always switch on
 (require 'hackernews)
