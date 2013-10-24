@@ -1,12 +1,11 @@
 (when (< emacs-major-version 24)
   (message "Will be missing some features with emacs major version < 24"))
 
-(add-to-list 'load-path "~/.emacs.d/packages/")
 (add-to-list 'load-path "~/.emacs.d/cmbmacs/")
 (add-to-list 'load-path "~/.emacs.d/local/")
 
-;;Hide menu bar, tool bar, scroll barand splash screen
-;;early on in startup to avoid having these elements flash on then off.
+;; Hide menu bar, tool bar, scroll bar and splash screen
+;; early on in startup to avoid having these elements flash on then off.
 (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -18,7 +17,7 @@
 (require 'cmb-appearance)  ;;Customized appearance
 (require 'cmb-python)  ;;Settings for editing python
 
-;;Various packages that I just always switch on
+;; Various packages that I just always switch on
 (require 'hackernews)
 
 ;; Load files any specific to local machine, which are stored
@@ -29,6 +28,8 @@
   (mapc 'load (directory-files local-settings-dir nil "^[^#].*el$")))
 
 ;; Leave a message saying when Emacs was loaded
-(message "Starting up Emacs version %s at %s (PID=%d)" emacs-version  (format-time-string "%T %a %d %b %y") (emacs-pid))
+(message "Starting up Emacs version %s at %s (PID=%d)"
+          emacs-version  (format-time-string "%T %a %d %b %y") (emacs-pid)
+)
 
 
