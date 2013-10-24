@@ -11,6 +11,10 @@
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (setq inhibit-startup-message t)
 
+;; The following are required in a number of different files
+(require 'pretty-lambdada)
+(require 'cl)
+
 (require 'cmb-packages)  ;;Package managers
 (require 'cmb-appearance)  ;;Customized appearance
 (require 'cmb-navigation)  ;;Macros for navigating emacs frames and files
