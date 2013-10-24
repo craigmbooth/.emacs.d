@@ -12,9 +12,9 @@
 (setq inhibit-startup-message t)
 
 (require 'cmb-packages)  ;;Package managers
+(require 'cmb-appearance)  ;;Customized appearance
 (require 'cmb-navigation)  ;;Macros for navigating emacs frames and files
 (require 'cmb-textedit)  ;;Macros for editing plaintext
-(require 'cmb-appearance)  ;;Customized appearance
 (require 'cmb-python)  ;;Settings for editing python
 (require 'cmb-keybindings)  ;;Remapped keys
 
