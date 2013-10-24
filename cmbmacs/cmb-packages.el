@@ -17,6 +17,7 @@
     guru-mode
     highlight-indentation
     markdown-mode
+    zoom-frm
     )
   "Ensure all the following packages are installed via package manager.")
 

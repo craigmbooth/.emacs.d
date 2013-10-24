@@ -16,6 +16,7 @@
 (require 'cmb-textedit)  ;;Macros for editing plaintext
 (require 'cmb-appearance)  ;;Customized appearance
 (require 'cmb-python)  ;;Settings for editing python
+(require 'cmb-keybindings)  ;;Remapped keys
 
 ;; Various packages that I just always switch on
 (require 'hackernews)

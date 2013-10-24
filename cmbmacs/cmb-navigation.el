@@ -25,11 +25,6 @@ point reaches the beginning or end of the buffer, stop there."
 (global-set-key [remap move-beginning-of-line]
                 'smarter-move-beginning-of-line)
 
-;; New keyboard shortcuts:
-(global-set-key "\C-cg" 'goto-line)
-(global-set-key "\C-cG" 'goto-char)
-(global-set-key "\C-cc" 'comment-region)
-(global-set-key "\C-cu" 'uncomment-region)
 
 ;;Interactively do things.  Better autocompleteion
 (require 'ido)
