@@ -30,6 +30,7 @@ Install the following support-executables, if they're not already installed
 I have used ideas and fragments of code from a large number of sources in putting together my Emacs configuration.  
 Notable sources include:
 
-* [emacs-prelude](https://github.com/bbatsov/prelude)
-* [better-defaults](https://github.com/technomancy/better-defaults)
-* [emacs-starter-kit](https://github.com/technomancy/emacs-starter-kit)
+* [emacs-prelude](https://github.com/bbatsov/prelude) --- Package management techniques
+* [better-defaults](https://github.com/technomancy/better-defaults) --- Many sensible changes
+* [cjohansen/.emacs.d](https://github.com/cjohansen/.emacs.d) --- Killing screen junk at start of config
+* [cndreisbach/.emacs.d](https://github.com/cndreisbach/.emacs.d) --- Markdown mode and some keybindings
