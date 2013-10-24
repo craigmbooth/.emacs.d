@@ -1,16 +1,32 @@
-.emacs.d
-========
+craigmbooth's .emacs.d
+======================
 
-This is my emacs setup.  Along with init.el, the setup is organized into three folders:
+### Overview
 
-* packages/ Small packages that I install by hand
-* cmbmacs/ My emacs configuration files, broken down by subject
-* local/ Local files for each machine. Ignored by the git repository
+This is my emacs setup.  The package is organized as follows:  The base of the installation is <code>init.el</code>,
+which automatically includes the contents of the three subdirectories:
 
-The packages/ directory currently contains
+* <code>packages/</code> Small packages that I install by hand
+* <code>cmbmacs/</code> My emacs configuration files, broken down by subject
+* <code>local/</code> Local files for each machine. Ignored by the git repository
 
-* guru-mode.el --- Become an Emacs guru (https://github.com/bbatsov/guru-mode)
-* hackernews.el --- Hacker News Client for Emacs (lincoln@comum.org)
-* highlight-indentation.el --- Minor modes for highlighting indentation (anton.johansson@gmail.com)
+The <code>packages/</code> directory currently contains
 
-Things somewhat work in Emacs 23, but it lacks the package package and I don't make much use of older Emacs any more so have just skipped a lot of this code.  The code will attempt to install everything on a first run using package.  Wish it luck!
+* <code>hackernews.el</code> --- Hacker News Client for Emacs (lincoln@comum.org)
+* <code>highlight-indentation.el</code> --- Minor modes for highlighting indentation (anton.johansson@gmail.com)
+
+On first run, the code will attempt to automatically install all of the required packages using <code>package.el</code>
+and <code>el-get.el</code>.  If you're running Emacs 23, be sure to install <code>package.el</code> to the
+<code>local/</code> directory before running for the first time.  No need to install <code>el-get.el</code> as it will
+automatically be bootstrapped in by the code on first run.
+
+###Installation
+
+Clone the repository to your home directory
+
+    git clone git@github.com:craigmbooth/.emacs.d.git ~
+    
+Install the following support-executables, if they're not already installed
+
+* <code>w3m</code> --- for in-Emacs web-browsing
+* <code>git</code> --- in order to automatically bootstrap in <code>el-get.el</code>
