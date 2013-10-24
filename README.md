@@ -24,3 +24,12 @@ Install the following support-executables, if they're not already installed
 
 * <code>w3m</code> --- for in-Emacs web-browsing
 * <code>git</code> --- in order to automatically bootstrap in <code>el-get.el</code>
+
+###Credits
+
+I have used ideas and fragments of code from a large number of sources in putting together my Emacs configuration.  
+Notable sources include:
+
+* [emacs-prelude](https://github.com/bbatsov/prelude)
+* [better-defaults](https://github.com/technomancy/better-defaults)
+* [emacs-starter-kit](https://github.com/technomancy/emacs-starter-kit)
