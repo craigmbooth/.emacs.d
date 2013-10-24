@@ -13,6 +13,9 @@
     pretty-lambdada
     diminish
     w3m
+    hackernews
+    guru-mode
+    highlight-indentation
     )
   "Ensure all the following packages are installed via package manager.")
 
