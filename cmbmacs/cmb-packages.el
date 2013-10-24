@@ -16,6 +16,7 @@
     hackernews
     guru-mode
     highlight-indentation
+    markdown-mode
     )
   "Ensure all the following packages are installed via package manager.")
 
