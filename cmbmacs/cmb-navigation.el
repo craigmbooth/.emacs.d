@@ -81,4 +81,12 @@ point reaches the beginning or end of the buffer, stop there."
       scroll-conservatively 10000
       scroll-preserve-screen-position 1)
 
+;; Settings for navigating the web with w3m
+(setq browse-url-browser-function 'w3m-browse-url)
+(setq w3m-default-display-inline-images t)
+
+;; Use C-0 to enter ace-jump-mode
+(require 'ace-jump-mode)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
 (provide 'cmb-navigation)

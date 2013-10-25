@@ -18,6 +18,7 @@
     highlight-indentation
     markdown-mode
     zoom-frm
+    ace-jump-mode
     )
   "Ensure all the following packages are installed via package manager.")
 

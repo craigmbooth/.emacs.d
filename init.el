@@ -39,5 +39,3 @@
 (message "Starting up Emacs version %s at %s (PID=%d)"
           emacs-version  (format-time-string "%T %a %d %b %y") (emacs-pid)
 )
-
-

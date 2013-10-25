@@ -27,11 +27,10 @@
 ;; When opening two files with the same name, don't name
 ;; the second one file<2>, instead prepend the directory
 (require 'uniquify)
-  (setq uniquify-buffer-name-style 'forward)
+(setq uniquify-buffer-name-style 'forward)
 
 ;; highlight matching parens
 (show-paren-mode 1)
-(setq show-paren-style 'expression)
 
 ;; put emacs: [buffer name] in frame title
 (setq frame-title-format
@@ -49,5 +48,11 @@
 
 (global-set-key [f11] 'toggle-fullscreen)
 
+;; Ensure correct encoding system
+(prefer-coding-system 'utf-8)
+(set-language-environment 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-selection-coding-system 'utf-8)
+(set-locale-environment "en_US.UTF-8")
 
 (provide 'cmb-appearance)
