@@ -74,4 +74,11 @@ point reaches the beginning or end of the buffer, stop there."
 ;; Undo/redo window configuration with C-c <left>/<right>
 (winner-mode 1)
 
+;; Less idiosyncratic scrolling behavior
+(setq redisplay-dont-pause t
+      scroll-margin 1
+      scroll-step 1
+      scroll-conservatively 10000
+      scroll-preserve-screen-position 1)
+
 (provide 'cmb-navigation)
