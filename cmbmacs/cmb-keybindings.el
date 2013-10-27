@@ -26,4 +26,10 @@
 (global-set-key [S-mouse-1]    'zoom-in)
 (global-set-key [C-S-mouse-1]  'zoom-out)
 
+;; Function defined in cmb-appearance
+(global-set-key (kbd "C-c t") 'toggle-transparency)
+
+;; Unbind C-z
+(global-unset-key (kbd "C-z"))
+
 (provide 'cmb-keybindings)

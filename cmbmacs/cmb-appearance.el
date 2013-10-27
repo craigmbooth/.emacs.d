@@ -55,4 +55,15 @@
 (set-selection-coding-system 'utf-8)
 (set-locale-environment "en_US.UTF-8")
 
+;; Set default opacity to 100% and define a function to turn
+;; it down to 85%.  The function is bound to a key in cmb-keybindings.el
+(set-frame-parameter (selected-frame) 'alpha '(100 100))
+(defun toggle-transparency ()
+   (interactive)
+   (if (/=
+        (cadr (frame-parameter nil 'alpha))
+        100)
+       (set-frame-parameter nil 'alpha '(100 100))
+     (set-frame-parameter nil 'alpha '(85 50))))
+
 (provide 'cmb-appearance)
