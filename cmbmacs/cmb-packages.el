@@ -19,6 +19,7 @@
     markdown-mode
     zoom-frm
     ace-jump-mode
+    yasnippet
     )
   "Ensure all the following packages are installed via package manager.")
 
