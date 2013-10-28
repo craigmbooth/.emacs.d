@@ -11,8 +11,9 @@
 ;; Always show column number
 (column-number-mode 1)
 
-;; Highlight the current buffer
+;; Dim inactive buffers.  Default dim face is a black background, make this gray.
 (auto-dim-other-buffers-mode 1)
+(set-face-attribute 'auto-dim-other-buffers-face nil :background "#2B2B2B")
 
 ;; Show line numbers to left of screen
 (global-linum-mode t)
