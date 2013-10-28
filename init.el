@@ -16,6 +16,7 @@
 
 ;; The following are required in a number of different files
 (require 'pretty-lambdada)
+(require 'diminish)
 (require 'cl)
 
 (require 'cmb-appearance)  ;;Customized appearance

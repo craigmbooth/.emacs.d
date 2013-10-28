@@ -6,7 +6,10 @@
   required modes"  
   (progn
     (whitespace-mode +1)
+    (diminish 'whitespace-mode)
     (highlight-indentation-mode +1)
+    (diminish 'highlight-indentation-mode)
+    (diminish 'auto-complete-mode)
     (pretty-lambda-mode +1)))
 
 (add-hook 'python-mode-hook 'activate-cmb-python-settings)
