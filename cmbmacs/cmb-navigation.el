@@ -85,8 +85,11 @@ point reaches the beginning or end of the buffer, stop there."
 (setq browse-url-browser-function 'w3m-browse-url)
 (setq w3m-default-display-inline-images t)
 
-;; Use C-0 to enter ace-jump-mode
+;; Use C-c [SPC] to enter ace-jump-mode
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
+(require 'yasnippet)
+(yas-global-mode 1)
 
 (provide 'cmb-navigation)
