@@ -38,7 +38,7 @@
   '("emacs: " (buffer-file-name "%f"
     (dired-directory dired-directory "%b"))))
 
-;; Let [f11] toggle fullscreen
+;; Define a function that toggles fullscreen
 (defun toggle-fullscreen ()
   "Toggle full screen on X11"
   (interactive)
@@ -46,8 +46,6 @@
     (set-frame-parameter
      nil 'fullscreen
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
-
-(global-set-key [f11] 'toggle-fullscreen)
 
 ;; Ensure correct encoding system
 (prefer-coding-system 'utf-8)
