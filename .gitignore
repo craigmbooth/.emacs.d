@@ -3,3 +3,4 @@ saves
 elpa
 el-get
 ac-comphist.dat
+snippets/*
