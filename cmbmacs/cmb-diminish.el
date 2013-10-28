@@ -13,4 +13,6 @@
 
 (diminish 'abbrev-mode)
 
+(eval-after-load "autopair" '(diminish 'autopair-mode))
+
 (provide 'cmb-diminish)
