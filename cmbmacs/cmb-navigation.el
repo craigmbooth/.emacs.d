@@ -95,4 +95,8 @@ point reaches the beginning or end of the buffer, stop there."
   (make-directory "~/.emacs.d/snippets/"))
 (yas-global-mode 1)
 
+;; Automatically close off parens
+(require 'autopair)
+(autopair-global-mode 1)
+
 (provide 'cmb-navigation)
