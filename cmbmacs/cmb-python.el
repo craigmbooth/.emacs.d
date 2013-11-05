@@ -1,6 +1,7 @@
 (require 'python-mode)
 (require 'highlight-indentation)
- 
+(require 'ein) 
+
 (defun activate-cmb-python-settings ()
   "This function to be called from python-mode-hook sets the
   required modes"  
@@ -25,7 +26,7 @@
 (setq jedi:setup-keys t)       ;add key bindings
 (setq jedi:complete-on-dot t)  ;always autocomplete after typing .
 (setq jedi:tooltip-method nil) ;function signature in minibuffer
- 
+
 ;; use IPython
 ;; C-c ! opens a python frame
 ;; C-c C-c executes the current buffer

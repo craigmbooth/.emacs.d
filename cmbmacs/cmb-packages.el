@@ -21,6 +21,7 @@
     ace-jump-mode
     yasnippet
     autopair
+    ein
     )
   "Ensure all the following packages are installed via package manager.")
 
