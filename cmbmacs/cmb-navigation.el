@@ -99,4 +99,11 @@ point reaches the beginning or end of the buffer, stop there."
 (require 'autopair)
 (autopair-global-mode 1)
 
+;; On a Mac, make the Meta key into option:
+(setq mac-option-key-is-meta nil)
+(setq mac-command-key-is-meta t)
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier nil)
+
+
 (provide 'cmb-navigation)

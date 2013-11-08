@@ -1,10 +1,14 @@
 (require 'python-mode)
 (require 'highlight-indentation)
-(require 'ein) 
+
+;; iPython Notebooks in Emacs
+(require 'ein)
+(setq ein:use-auto-complete t)
+(add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
 
 (defun activate-cmb-python-settings ()
   "This function to be called from python-mode-hook sets the
-  required modes"  
+  required modes"
   (progn
     (whitespace-mode +1)
     (diminish 'whitespace-mode)
@@ -17,10 +21,10 @@
 (add-hook 'python-mode-hook 'activate-cmb-python-settings)
 
 ;;Highlight trailing whitespace and lines over 80 characters
-(setq whitespace-line-column 80
+(setq whitespace-line-column 79
         whitespace-style '(face tabs trailing lines-tail))
-   
-;; Stuff for jedi:
+
+;;;; Stuff for jedi:
 (when (>= emacs-major-version 24)
   (add-hook 'python-mode-hook 'jedi:setup))
 (setq jedi:setup-keys t)       ;add key bindings
@@ -44,5 +48,5 @@
 (setq py-split-windows-on-execute-p nil)
 ; try to automagically figure out indentation
 (setq py-smart-indentation t)
-   
+
 (provide 'cmb-python)
