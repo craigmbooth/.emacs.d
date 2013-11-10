@@ -25,6 +25,9 @@ point reaches the beginning or end of the buffer, stop there."
 (global-set-key [remap move-beginning-of-line]
                 'smarter-move-beginning-of-line)
 
+;; Edit files on other machines
+(require 'tramp)
+(setq tramp-default-method "ssh")
 
 ;;Interactively do things.  Better autocompleteion
 (require 'ido)
@@ -49,7 +52,7 @@ point reaches the beginning or end of the buffer, stop there."
 ;; always indent with spaces
 (setq-default indent-tabs-mode nil)
 
-;; Move the *~ files to ~/.emacs.d/saves/ 
+;; Move the *~ files to ~/.emacs.d/saves/
 (unless (file-exists-p "~/.emacs.d/saves/")
   (make-directory "~/.emacs.d/saves/"))
 
@@ -89,12 +92,6 @@ point reaches the beginning or end of the buffer, stop there."
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
-;; YASnippets.  Make snippets/ directory if it doesn't yet exist
-(require 'yasnippet)
-(unless (file-exists-p "~/.emacs.d/snippets/")
-  (make-directory "~/.emacs.d/snippets/"))
-(yas-global-mode 1)
-
 ;; Automatically close off parens
 (require 'autopair)
 (autopair-global-mode 1)
@@ -104,6 +101,5 @@ point reaches the beginning or end of the buffer, stop there."
 (setq mac-command-key-is-meta t)
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier nil)
-
 
 (provide 'cmb-navigation)

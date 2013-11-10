@@ -15,10 +15,12 @@
     (highlight-indentation-mode +1)
     (diminish 'highlight-indentation-mode)
     (diminish 'auto-complete-mode)
-    (add-hook 'before-save-hook 'delete-trailing-whitespace)
     (pretty-lambda-mode +1)))
 
 (add-hook 'python-mode-hook 'activate-cmb-python-settings)
+
+;; To do:  Make this only activate in Python mode
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;;Highlight trailing whitespace and lines over 80 characters
 (setq whitespace-line-column 79
