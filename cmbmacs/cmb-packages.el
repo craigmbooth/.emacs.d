@@ -1,5 +1,5 @@
 ;;;Repositories for emacs packages
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")  
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
 (require 'package)
 (require 'cl)
@@ -8,7 +8,8 @@
 (defvar cmb-packages
   '(zenburn-theme
     python-mode
-    typing auctex
+    typing
+    auctex
     auto-dim-other-buffers
     pretty-lambdada
     diminish
@@ -47,26 +48,5 @@
   (dolist (p cmb-packages)
     (when (not (package-installed-p p))
       (package-install p))))
-
-(if (>= emacs-major-version 24)
-   (progn
-     (unless (require 'el-get nil 'noerror)
-       (with-current-buffer
-	   (url-retrieve-synchronously
-	    "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-	 (let (el-get-master-branch)
-	   (goto-char (point-max))
-	   (eval-print-last-sexp))))
-	   ;Append packages we wanto to el-get's list:
-         (setq my-el-get-packages  
-          (append  
-           '(jedi)  
-           (mapcar 'el-get-source-name el-get-sources)))  
-           (el-get 'sync my-el-get-packages)  
-   )
-   (progn
-    (message "Emacs version < 24, skipping el-get")
-   )
-)
 
 (provide 'cmb-packages)

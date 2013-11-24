@@ -3,8 +3,6 @@
 
 ;; iPython Notebooks in Emacs
 (require 'ein)
-(setq ein:use-auto-complete t)
-(add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
 
 (defun activate-cmb-python-settings ()
   "This function to be called from python-mode-hook sets the
@@ -26,19 +24,12 @@
 (setq whitespace-line-column 79
         whitespace-style '(face tabs trailing lines-tail))
 
-;;;; Stuff for jedi:
-(when (>= emacs-major-version 24)
-  (add-hook 'python-mode-hook 'jedi:setup))
-(setq jedi:setup-keys t)       ;add key bindings
-(setq jedi:complete-on-dot t)  ;always autocomplete after typing .
-(setq jedi:tooltip-method nil) ;function signature in minibuffer
-
 ;; use IPython
 ;; C-c ! opens a python frame
 ;; C-c C-c executes the current buffer
 ;; C-c | executes the current region
 (setq-default py-shell-name "ipython")
-(setq-default py-which-bufname "IPython")
+(setq-default py-which-bufname "Python")
 ; use the wx backend, for both mayavi and matplotlib
 (setq py-python-command-args
       '("--gui=wx" "--pylab=wx" "-colors" "Linux"))
