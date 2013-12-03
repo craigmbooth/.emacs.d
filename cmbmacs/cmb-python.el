@@ -17,6 +17,9 @@
 
 (add-hook 'python-mode-hook 'activate-cmb-python-settings)
 
+(require 'yasnippet)
+(yas-global-mode 1)
+
 ;; To do:  Make this only activate in Python mode
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 

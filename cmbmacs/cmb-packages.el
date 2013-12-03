@@ -8,6 +8,7 @@
 (defvar cmb-packages
   '(zenburn-theme
     python-mode
+    pymacs
     typing
     auctex
     auto-dim-other-buffers
