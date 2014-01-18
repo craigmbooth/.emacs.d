@@ -23,8 +23,13 @@
 ;; To do:  Make this only activate in Python mode
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;;Also need to do pip install epc jedi
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:setup-keys t)
+(setq jedi:complete-on-dot t)
+
 ;;Highlight trailing whitespace and lines over 80 characters
-(setq whitespace-line-column 79
+(setq whitespace-line-column 80
         whitespace-style '(face tabs trailing lines-tail))
 
 ;; use IPython
