@@ -33,4 +33,7 @@
 ;; Unbind C-z
 (global-unset-key (kbd "C-z"))
 
+;; Allow downcase-region
+(put 'downcase-region 'disabled nil)
+
 (provide 'cmb-keybindings)
