@@ -1,6 +1,6 @@
 ;; Zenburn theme with electric pink cursor
 (when (> emacs-major-version 23)
-(progn 
+(progn
   (load-theme 'zenburn t)
   (add-to-list 'default-frame-alist '(cursor-color . "#f00bac"))
 ))
@@ -11,12 +11,10 @@
 ;; Always show column number
 (column-number-mode 1)
 
-;; Dim inactive buffers.  Default dim face is a black background, make this gray.
+;; Dim inactive buffers.  Default dim face is a black background, make
+;; this gray.
 (auto-dim-other-buffers-mode 1)
 (set-face-attribute 'auto-dim-other-buffers-face nil :background "#2B2B2B")
-
-;; Show line numbers to left of screen
-(global-linum-mode t)
 
 ;; Change appearance of the fringes to show extent of buffer
 (setq-default indicate-buffer-boundaries 'left)

@@ -10,6 +10,7 @@
     python-mode
     pymacs
     typing
+    jedi
     auctex
     auto-dim-other-buffers
     pretty-lambdada
