@@ -15,4 +15,6 @@
 
 (eval-after-load "autopair" '(diminish 'autopair-mode))
 
+(eval-after-load "yasnippet" '(diminish 'yas-minor-mode))
+
 (provide 'cmb-diminish)
