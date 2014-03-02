@@ -1,7 +1,7 @@
 ;; Zenburn theme with electric pink cursor
 (when (> emacs-major-version 23)
 (progn
-  (load-theme 'zenburn t)
+  (load-theme 'flatland t)
   (add-to-list 'default-frame-alist '(cursor-color . "#f00bac"))
 ))
 
@@ -14,7 +14,7 @@
 ;; Dim inactive buffers.  Default dim face is a black background, make
 ;; this gray.
 (auto-dim-other-buffers-mode 1)
-(set-face-attribute 'auto-dim-other-buffers-face nil :background "#2B2B2B")
+(set-face-attribute 'auto-dim-other-buffers-face nil :background "#1B1B1B")
 
 ;; Change appearance of the fringes to show extent of buffer
 (setq-default indicate-buffer-boundaries 'left)
