@@ -7,6 +7,7 @@
 ;;; Packages to be installed by package
 (defvar cmb-packages
   '(zenburn-theme
+    flatland-theme
     python-mode
     pymacs
     typing
