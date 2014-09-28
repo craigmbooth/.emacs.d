@@ -27,6 +27,7 @@
     yasnippet
     autopair
     ein
+    rainbow-delimiters
     )
   "Ensure all the following packages are installed via package manager.")
 

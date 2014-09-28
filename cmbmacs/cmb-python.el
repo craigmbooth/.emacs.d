@@ -28,6 +28,9 @@
 (setq jedi:setup-keys t)
 (setq jedi:complete-on-dot t)
 
+;;Rainbow delimiters
+(add-hook 'python-mode-hook `rainbow-delimiters-mode)
+
 ;;Highlight trailing whitespace and lines over 80 characters
 (setq whitespace-line-column 80
         whitespace-style '(face tabs trailing lines-tail))
