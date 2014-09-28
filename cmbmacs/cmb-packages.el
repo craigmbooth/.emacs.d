@@ -8,6 +8,7 @@
 (defvar cmb-packages
   '(zenburn-theme
     flatland-theme
+    sphinx-doc
     python-mode
     pymacs
     typing
