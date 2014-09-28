@@ -19,15 +19,12 @@
 (require 'diminish)
 (require 'cl)
 
-(require 'cmb-appearance)  ;;Customized appearance
-(require 'cmb-navigation)  ;;Macros for navigating emacs frames and files
-(require 'cmb-textedit)  ;;Macros for editing plaintext
-(require 'cmb-python)  ;;Settings for editing python
-(require 'cmb-keybindings)  ;;Remapped keys
-(require 'cmb-diminish) ;;Hide irrelevant minor modes
-
-;; Various packages that I just always switch on
-(require 'hackernews)
+(require 'cmb-appearance)  ;; Customized appearance
+(require 'cmb-navigation)  ;; Macros for navigating emacs frames and files
+(require 'cmb-textedit)  ;; Macros for editing plaintext
+(require 'cmb-python)  ;; Settings for editing python
+(require 'cmb-keybindings)  ;; Remapped keys
+(require 'cmb-diminish) ;; Hide irrelevant minor modes
 
 ;; Load files any specific to local machine, which are stored
 ;; in user-emacs-directory/local/

@@ -23,17 +23,17 @@
 ;; To do:  Make this only activate in Python mode
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;;Also need to do pip install epc jedi
+;; Also need to do pip install epc jedi
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:setup-keys t)
 (setq jedi:complete-on-dot t)
 
-;;Rainbow delimiters
-(add-hook 'python-mode-hook `rainbow-delimiters-mode)
-
-;;Highlight trailing whitespace and lines over 80 characters
+;; Highlight trailing whitespace and lines over 80 characters
 (setq whitespace-line-column 80
         whitespace-style '(face tabs trailing lines-tail))
+
+;; Rainbow delimiters
+(add-hook 'python-mode-hook `rainbow-delimiters-mode)
 
 ;; use IPython
 ;; C-c ! opens a python frame
