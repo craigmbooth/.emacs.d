@@ -103,6 +103,7 @@ point reaches the beginning or end of the buffer, stop there."
 (setq mac-option-modifier nil)
 
 ;; If you open a file in a non-existent directory, offer to create it
+;; http://iqbalansari.github.io/blog/2014/12/07/automatically-create-parent-directories-on-visiting-a-new-file-in-emacs/
 (defun my-create-non-existent-directory ()
       (let ((parent-directory (file-name-directory buffer-file-name)))
         (when (and (not (file-exists-p parent-directory))
