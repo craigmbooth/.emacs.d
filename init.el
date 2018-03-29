@@ -21,10 +21,11 @@
 
 (require 'cmb-appearance)  ;; Customized appearance
 (require 'cmb-navigation)  ;; Macros for navigating emacs frames and files
-(require 'cmb-textedit)  ;; Macros for editing plaintext
-(require 'cmb-python)  ;; Settings for editing python
-(require 'cmb-keybindings)  ;; Remapped keys
-(require 'cmb-diminish) ;; Hide irrelevant minor modes
+(require 'cmb-textedit)    ;; Macros for editing plaintext
+(require 'cmb-python)      ;; Settings for editing python
+(require 'cmb-php)         ;; Settings for editing PHP
+(require 'cmb-keybindings) ;; Remapped keys
+(require 'cmb-diminish)    ;; Hide irrelevant minor modes
 
 ;; Load files any specific to local machine, which are stored
 ;; in user-emacs-directory/local/

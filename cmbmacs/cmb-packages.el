@@ -8,21 +8,18 @@
 (defvar cmb-packages
   '(zenburn-theme
     flatland-theme
+    guru-mode
     python-mode
     markdown-mode
     php-mode
-    pymacs
     auctex
+    autopair
     auto-dim-other-buffers
     diminish
-    w3m
-    guru-mode
     highlight-indentation
-    zoom-frm
-    yasnippet
-    autopair
-    ein
+    pymacs
     rainbow-delimiters
+    yasnippet
     )
   "Ensure all the following packages are installed via package manager.")
 
@@ -31,7 +28,6 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 (package-initialize)
-
 
 (defun cmb-packages-installed-p ()
   (loop for p in cmb-packages
