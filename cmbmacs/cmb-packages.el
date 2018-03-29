@@ -9,19 +9,16 @@
   '(zenburn-theme
     flatland-theme
     python-mode
+    markdown-mode
+    php-mode
     pymacs
-    jedi
     auctex
     auto-dim-other-buffers
-    pretty-lambdada
     diminish
     w3m
-    hackernews
     guru-mode
     highlight-indentation
-    markdown-mode
     zoom-frm
-    ace-jump-mode
     yasnippet
     autopair
     ein
