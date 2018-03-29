@@ -8,6 +8,7 @@
 (defvar cmb-packages
   '(zenburn-theme
     flatland-theme
+    ace-jump-mode
     guru-mode
     python-mode
     markdown-mode

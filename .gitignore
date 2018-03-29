@@ -4,4 +4,4 @@ elpa
 el-get
 ac-comphist.dat
 eshell/*
-tramp
+.ido.last
