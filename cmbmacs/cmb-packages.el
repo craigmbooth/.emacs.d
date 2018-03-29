@@ -13,7 +13,6 @@
     python-mode
     markdown-mode
     php-mode
-    auctex
     autopair
     auto-dim-other-buffers
     diminish
